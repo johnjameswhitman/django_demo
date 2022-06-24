@@ -37,7 +37,7 @@ quickstart][drf_quickstart], `drf_spectacular` and `openapi-generator-cli`.
         -v "$PWD:/local" \
         openapitools/openapi-generator-cli \
         generate \
-        -i /local/templates/openapi-schema.yml \
+        -i /local/client/schema.yml \
         -g python \
         -o /local/client/python
     ```
