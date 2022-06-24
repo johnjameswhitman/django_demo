@@ -49,11 +49,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import openapi_client
 from pprint import pprint
-from openapi_client.api import groups_api
-from openapi_client.model.group import Group
-from openapi_client.model.group_request import GroupRequest
-from openapi_client.model.paginated_group_list import PaginatedGroupList
-from openapi_client.model.patched_group_request import PatchedGroupRequest
+from openapi_client.api import api_api
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -81,16 +77,15 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groups_api.GroupsApi(api_client)
-    group_request = GroupRequest(
-        name="name_example",
-    ) # GroupRequest | 
+    api_instance = api_api.ApiApi(api_client)
+    format = "json" # str |  (optional)
+    lang = "af" # str |  (optional)
 
     try:
-        api_response = api_instance.groups_create(group_request)
+        api_response = api_instance.api_schema_retrieve(format=format, lang=lang)
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling GroupsApi->groups_create: %s\n" % e)
+        print("Exception when calling ApiApi->api_schema_retrieve: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -99,6 +94,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ApiApi* | [**api_schema_retrieve**](docs/ApiApi.md#api_schema_retrieve) | **GET** /api/schema/ | 
 *GroupsApi* | [**groups_create**](docs/GroupsApi.md#groups_create) | **POST** /groups/ | 
 *GroupsApi* | [**groups_destroy**](docs/GroupsApi.md#groups_destroy) | **DELETE** /groups/{id}/ | 
 *GroupsApi* | [**groups_list**](docs/GroupsApi.md#groups_list) | **GET** /groups/ | 

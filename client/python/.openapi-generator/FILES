@@ -1,8 +1,8 @@
 .gitignore
 .gitlab-ci.yml
-.openapi-generator-ignore
 .travis.yml
 README.md
+docs/ApiApi.md
 docs/Group.md
 docs/GroupRequest.md
 docs/GroupsApi.md
@@ -16,6 +16,7 @@ docs/UsersApi.md
 git_push.sh
 openapi_client/__init__.py
 openapi_client/api/__init__.py
+openapi_client/api/api_api.py
 openapi_client/api/groups_api.py
 openapi_client/api/users_api.py
 openapi_client/api_client.py
@@ -39,12 +40,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_group_request.py
-test/test_groups_api.py
-test/test_paginated_group_list.py
-test/test_paginated_user_list.py
-test/test_patched_group_request.py
-test/test_patched_user_request.py
-test/test_user_request.py
-test/test_users_api.py
+test/test_api_api.py
 tox.ini

@@ -35,7 +35,7 @@ quickstart][drf_quickstart], `drf_spectacular` and `openapi-generator-cli`.
     docker run \
         --rm \
         -v "$PWD:/local" \
-        openapitools/openapi-generator-cli \
+        openapitools/openapi-generator-cli:v6.0.0 \
         generate \
         -i /local/client/schema.yml \
         -g python \
