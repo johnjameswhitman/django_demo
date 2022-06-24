@@ -3,8 +3,8 @@
 with pkgs; mkShell {
   nativeBuildInputs = [
     apacheHttpd
-    bazel
-    nginx
+    # bazel
+    # nginx
     python3
     # python38Packages.wheel
   ];
