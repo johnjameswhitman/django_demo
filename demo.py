@@ -47,7 +47,7 @@ from openapi_client.model.patched_group_request import PatchedGroupRequest
 
 # Configure HTTP basic authorization: basicAuth
 configuration = openapi_client.Configuration(
-    host="http://localhost:5000", username="admin", password="Pass1234"
+    host="http://localhost:5001", username="admin", password="Pass1234"
 )
 
 # Configure API key authorization: cookieAuth
