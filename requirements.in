@@ -1,8 +1,8 @@
 # Core
 django~=4.0
 djangorestframework~=3.13
-django-stubs~=1.11
-djangorestframework-stubs~=1.6
+django-stubs~=1.0
+djangorestframework-stubs~=1.0
 drf-spectacular
 pyyaml
 uritemplate
